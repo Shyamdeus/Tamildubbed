@@ -8,9 +8,6 @@ const isDev = import.meta.env.DEV;
 const isDeployPreview = process.env.CONTEXT === 'deploy-preview';
 const previewDrafts = STACKBIT_PREVIEW?.toLowerCase() === 'true' || SANITY_PREVIEW_DRAFTS?.toLowerCase() === 'true';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 export const sanityConfig: ClientConfig = {
     projectId: SANITY_PROJECT_ID,
     dataset: SANITY_DATASET || 'production',
